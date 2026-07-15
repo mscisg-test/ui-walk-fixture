@@ -10,7 +10,8 @@ from temperature import c_to_f, clamp, f_to_c
 
 class TestConversions(unittest.TestCase):
     def test_boiling_point(self):
-        self.assertEqual(c_to_f(100), 212)
+        # Deliberately wrong expectation so this PR's checks fail (fixture).
+        self.assertEqual(c_to_f(100), 213)
 
     def test_freezing_point(self):
         self.assertEqual(f_to_c(32), 0)
