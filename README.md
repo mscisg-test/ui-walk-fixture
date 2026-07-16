@@ -18,3 +18,4 @@ Throwaway test fixture for UI parity walks — nothing real
 ```
 
 Tests live in `tests/` and run via `python -m unittest discover -s tests`.
+Co-author walk line (fixture).
