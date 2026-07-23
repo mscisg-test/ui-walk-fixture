@@ -6,7 +6,9 @@ import math
 def dew_point_c(temp_c, relative_humidity):
     """Approximate dew point (Celsius) via the Magnus formula.
 
-    `relative_humidity` is a fraction in (0, 1], not a percentage.
+    `relative_humidity` is a fraction in (0, 1], not a percentage — pass
+    0.65 for 65% RH, not 65. Values outside that range raise ValueError
+    since they can't correspond to a physical reading.
     """
     if not 0 < relative_humidity <= 1:
         raise ValueError("relative_humidity must be in (0, 1]")
