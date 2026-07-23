@@ -17,5 +17,11 @@ Throwaway test fixture for UI parity walks — nothing real
 100
 ```
 
+`src/pressure.py` provides:
+
+- `altitude_from_pressure(pressure_pa, sea_level_pa=SEA_LEVEL_PA)` /
+  `pressure_from_altitude(altitude_m, sea_level_pa=SEA_LEVEL_PA)` —
+  barometric formula approximations, inverses of each other
+
 Tests live in `tests/` and run via `python -m unittest discover -s tests`.
 Co-author walk line (fixture).
